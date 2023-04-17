@@ -41,7 +41,7 @@ void test(T&& x) {
     cout << "decltype(x):\t";
     print_type<decltype(x)>();
     cout << "forward(x):\t";
-    print_type(forward<T&&>(x));
+    print_type(forward<T>(x));   //完美转发
     cout << "static_cast<decltype(x)>(x):\t";
     print_type(static_cast<decltype(x)>(x));
     cout << "---Test end.\n" << endl;
