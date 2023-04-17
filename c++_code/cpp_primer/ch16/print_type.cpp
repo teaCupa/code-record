@@ -37,11 +37,11 @@ void test(T&& x) {
     cout << "T&&:\t";
     print_type<T&&>(); //int& && => int&  ,        int &&  => int&&
     cout << "x:\t";
-    print_type(x);  //x: int&  ,   int&&
+    print_type(x);  //x: int&  ,   int&&      总是左值？对比forward<T>(x)
     cout << "decltype(x):\t";
     print_type<decltype(x)>();
     cout << "forward(x):\t";
-    print_type(forward<T>(x));   //完美转发
+    print_type(forward<T>(x));   //完美转发， 左值转左值，右值转右值
     cout << "static_cast<decltype(x)>(x):\t";
     print_type(static_cast<decltype(x)>(x));
     cout << "---Test end.\n" << endl;
