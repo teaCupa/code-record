@@ -1,0 +1,1 @@
+add_executable(extends extends/disc_quote.cpp extends/quote.cpp extends/main.cpp)

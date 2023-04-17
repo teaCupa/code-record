@@ -1,0 +1,1 @@
+add_executable(fact ch6.cpp chapter6.h factMain.cpp)
