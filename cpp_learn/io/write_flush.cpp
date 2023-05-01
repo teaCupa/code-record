@@ -4,9 +4,11 @@
 
 #include<stdio.h>
 #include<unistd.h>
+#include <fstream>
 
 int main()
 {
+/**
     FILE *fp = fopen("./file.txt","a");
     if(fp == NULL)
     {
@@ -16,6 +18,9 @@ int main()
     fwrite("hello",5,1,fp);
 //	fflush(fp);
 //	fclose(fp);  //buffer_ flush to disk
-
+*/
+   std::ofstream myfile("./file.txt");
+    myfile << "hello!";
+    myfile.close();
     return 0;
 }
